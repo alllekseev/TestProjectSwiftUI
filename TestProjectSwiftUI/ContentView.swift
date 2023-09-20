@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello")
+        NavigationStack {
+            VStack {
+                NavigationLink("Show News View") {
+                    NewsTable()
+                }
+            }
+            .navigationTitle("Main Page")
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
